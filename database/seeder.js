@@ -25,7 +25,7 @@ async function seedPayments() {
     const ilhamFathur = await Resident.findOne({ name: 'Ilham Fathur' });
 
     let pay1 = new Payment({ date: 2022-04-28, nominal: 15000, description: "bayar iuran sampah", resident: ilhamFathur._id });
-    let pay2 = new Payment({ date: 2022-05-05, nominal: 10000, description: "bayar iuran keamanan", resident: farhanMuhammad._id });
+    let pay2 = new Payment({ date: new Date("2022-05-05"), nominal: 10000, description: "bayar iuran keamanan", resident: farhanMuhammad._id });
     let pay3 = new Payment({ date: new Date("2022-05-05"), nominal: 10000, description: "bayar iuran keamaman", resident: ilhamFathur._id });
     
     await pay1.save();
